@@ -21,6 +21,8 @@ body {
   background-color: rgb(255, 255, 255);
   height: 115px;
   font-size: 16px;
+  font-family: 'Ysabeau Office';
+  font-style: normal;
   &_logo{
     text-decoration: none;
     margin-left: 84px;
@@ -36,12 +38,18 @@ body {
     color: black;
     margin-top: -75px;
     margin-right: 84px;
+    font-size: 16px;
     &_but{
-      background-color: #60617F;
-      color: #ffffff;
-      width: 121px;
-      height: 55px;
-      border-radius: 30px;
+      /* Rectangle 1 */
+
+// position: absolute;
+width: 121px;
+height: 55px;
+left: 1256px;
+top: 33px;
+background: #60617F;
+border-radius: 30px;
+color: #FFFFFF;
       font-size: 14px;
       text-align: center;
       display: flex;
@@ -60,25 +68,45 @@ body {
     position: relative;
   }
   &_inf{
-    position: absolute;
-    color: rgb(255, 255, 255);
-    left: 37%;
-    top: 30%;
-    transform: translate(-50%, -50%);
-    padding: 0.5rem;
-    font-size: 35px;
-    margin-top: 40px;
+  /* Аренда помещений в торговом центре. */
+
+position: absolute;
+width: 667px;
+height: 214px;
+left: 99px;
+top: 130px;
+
+font-family: 'Ysabeau Office';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 107px;
+
+color: #FFFFFF;
+
+
+
     &_but{
-      background-color: #ffffff;
-      color: #000000;
-      width: 439px;
-      height: 66px;
-      border-radius: 30px;
-      font-size: 32px;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+position: absolute;
+top: 687px;
+
+font-family: 'Carrois Gothic';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 43px;
+
+color: #000000;
+
+position: absolute;
+width: 439px;
+height: 66px;
+top: 200%;
+
+background: #FFFFFF;
+border-radius: 30px;
+
+
     }
   }
 }
