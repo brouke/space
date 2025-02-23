@@ -2,6 +2,7 @@
 @import '@/components/Modals/index.scss';
 @import '@/components/Select/index.scss';
 @import '@/components/Input/index.scss';
+@import '@/assets/scss/Account/index.scss';
 
 html,
 body {
@@ -14,3 +15,20 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.head{
+  background-color: aqua;
+  &_button{
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    margin-left: 50px;
+  }
+  &_input{
+    margin-left: 10px;
+  }
+}
+@font-face {
+  font-family: 'OpenSans'; 
+  src: url(/assets/Font/OpenSans.ttf); 
+  }

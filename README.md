@@ -1,3 +1,13 @@
+!!!!!!!!
+1.npm i 
+2.npm run dev
+!!!!!!!!
+
+
+
+
+
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
