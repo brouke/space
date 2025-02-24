@@ -15,9 +15,9 @@
         <button class="banner_inf_but">Смотреть помещения</button>
     </div></div>
   </div>
-
+<div class="zag">
   <h1>Помещения</h1>
- 
+ </div>
   <div class="blok">
     <img class="blok_img" src="assets/scss/img/diploma.webp" alt="">
     <div class="blok_info">
@@ -39,6 +39,16 @@
         :className="'btn__add-button'"
         />  -->
   <div class="foot">
+    <div class="foot_blok1">
+      <a href=""><h3>О нас</h3></a>
+      <a href=""><h3>Помещения</h3></a>
+      <h3>Адрес: г. Ижевск Пушкинская д. 125</h3>
+    </div>
+    <div class="foot_blok2">
+      <h3>Телефоны:</h3>
+      <h3>8 (900) 000-88-99</h3>
+      <h3>8 (901) 000-99-99</h3>
+    </div>
   </div>
 </template>
 <style >
