@@ -68,47 +68,83 @@ color: #FFFFFF;
     position: relative;
   }
   &_inf{
-  /* Аренда помещений в торговом центре. */
-
 position: absolute;
 width: 667px;
 height: 214px;
 left: 99px;
 top: 130px;
-
 font-family: 'Ysabeau Office';
 font-style: normal;
 font-weight: 400;
 font-size: 35px;
 line-height: 107px;
-
 color: #FFFFFF;
-
-
-
     &_but{
 position: absolute;
 top: 687px;
-
 font-family: 'Carrois Gothic';
 font-style: normal;
 font-weight: 400;
 font-size: 36px;
 line-height: 43px;
-
 color: #000000;
-
 position: absolute;
 width: 439px;
 height: 66px;
 top: 200%;
-
 background: #FFFFFF;
 border-radius: 30px;
-
-
     }
   }
+}
+.blok{
+position: absolute;
+width: 1295px;
+height: 400px;
+left: 7%;
+top: 1793px;
+bottom: 5%;
+background-color: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+display: flex;
+// justify-content: center;
+margin-top: -60%;
+&_img{
+width: 330px;
+height: 330px;
+object-fit: cover;
+margin: 30px;
+}
+&_info{
+  margin: 5px;
+  &_desc{
+width: 848px;
+height: 160px;
+font-family: 'Carrois Gothic';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 40px;
+color: #000000;
+  }
+  &_but{
+width: 197px;
+height: 40px;
+background: #60617F;
+border-radius: 30px;
+color: #FFFFFF;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 10px;
+  }
+}
+}
+h4{
+  color: #565656;
+}
+.foot{
+  background-color: #FFFFFF;
 }
 @font-face {
   font-family: 'OpenSans'; 

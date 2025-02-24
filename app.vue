@@ -14,11 +14,32 @@
         в торговом центре. </h1>
         <button class="banner_inf_but">Смотреть помещения</button>
     </div></div>
-  </div> 
+  </div>
+
+  <h1>Помещения</h1>
+ 
+  <div class="blok">
+    <img class="blok_img" src="assets/scss/img/diploma.webp" alt="">
+    <div class="blok_info">
+      <h2>Помещение А 70 000 Р.</h2>
+      <h4>1 этаж, 100 кв. м.</h4>
+      <div class="blok_info_desc">
+      <p>Аренда помещения на первом этаже торгового центра 
+площадью 100 кв. метров с кондиционером. Идеально 
+подходит для розничной торговли или офисов, с большими 
+витринными окнами для привлечения клиентов. </p>
+</div>
+<a href=""><button class="blok_info_but"><h1>Арендовать</h1></button></a>
+    </div>
+  </div>
+
+  
    <!-- <Button 
         placeholder="добавить"
         :className="'btn__add-button'"
         />  -->
+  <div class="foot">
+  </div>
 </template>
 <style >
 @import '@/assets/scss/index.scss';
