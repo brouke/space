@@ -3,10 +3,11 @@
     <div class="head_logo">
      <a href="/"><h1>Logo</h1></a>
      <div class="head_menu">
-      <a href="Info.vue"><h1>О Нас</h1></a>
-      <a href=""><button class="head_menu_but"><h1>Войти</h1></button></a>
+      <a href="/page/Info.vue"><h1>О Нас</h1></a>
+      <a href="/page/auth.vue"><button class="head_menu_but"><h1>Войти</h1></button></a>
      </div>
     </div>
+   </div>
     <div class="banner">
       
       <img class="banner_img" src="assets/scss/img/81e9615feb8a0f4cee1aa91c6986b622.jpg" alt="">
@@ -14,7 +15,7 @@
         в торговом центре. </h1>
         <button class="banner_inf_but">Смотреть помещения</button>
     </div></div>
-  </div>
+ 
 <div class="zag">
   <h1>Помещения</h1>
  </div>
