@@ -57,6 +57,40 @@
             cursor: pointer;
             padding: 15px;
     }
+    &_auth{
+        &-button{
+            width: 100px !important;
+            height: 40px !important;
+            border-radius: 30px !important;
+            background: #60617F !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            font-family: 'Ysabeau Office';
+        }
+    }
+    &_cee{
+        &-button{
+            border-radius: 30px;
+            color: black;
+            font-family: 'Carrois';
+        }
+    }
+    &_buy{
+        &-button{
+            border-radius: 30px !important;
+            background: #60617F !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Carrois';
+            font-size: 28px;
+            padding: 8px;
+            border: none;
+        }
+    }
     }
     .active{
         background: #C4C4C4;
