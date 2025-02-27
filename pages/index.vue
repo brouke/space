@@ -1,4 +1,8 @@
 <template>
+  <Header></Header>
+  {{ items }}
+  <input type="file" ref="fileInput" />
+    <button @click="sendData">Отправить</button>
   <div class="banner">
     <div class="banner_inf">
       <div class="banner_text">
@@ -38,32 +42,82 @@
   @import '@/assets/scss/index.scss';
   </style>
   <script setup>
-  async function fetchProducts() {
-    const response = await fetch('/products');
+//  fetch('http://127.0.0.1:8000/Document')
+//   .then(response => response.json())
+//   .then(data => console.log(data))
+//   .catch(error => console.error('Ошибка:', error));
+  
+
+//   import { ref, onMounted } from 'vue';
+
+// const items = ref([]); // Хранит полученные данные
+// const error = ref(null); // Хранит ошибки, если они возникнут
+
+// // Функция для получения данных
+// const fetchItems = async () => {
+//   try {
+//     const response = await fetch('http://127.0.0.1:8000/Document');
+//     if (!response.ok) {
+//       throw new Error('Ошибка сети');
+//     }
+//     const data = await response.json();
+//     items.value = data; // Сохраняем данные в реактивной переменной
+//   } catch (err) {
+//     error.value = err.message; // Сохраняем сообщение об ошибке
+//   }
+// };
+// onMounted(fetchItems);
+
+import { ref } from 'vue';
+
+const fileInput = ref(null);
+
+const sendData = async () => {
+  const url = 'http://127.0.0.1:8000/Document';
+  const formData = new FormData();
+
+  // Объект данных
+  const data = {
+    rental: 1,
+    idclient: 1,
+    number: 1,
+    login: "qwe",
+    Name: "qwe",
+    adress: "qwe",
+    requisites: 1,
+    password: "qwe",
+    contactface: "qwe"
+  };
+
+  // Добавляем объект данных в FormData
+  for (const key in data) {
+    formData.append(`data[${key}]`, data[key]); // Оборачиваем в data
+  }
+
+  // Получаем файл из input
+  const file = fileInput.value.files[0]; // Используем ref
+  if (file) {
+    formData.append('photo', file); // Добавляем файл в FormData
+  } else {
+    console.error('Файл не выбран');
+    return;
+  }
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      body: formData // Отправляем FormData
+    });
 
     if (!response.ok) {
-        const error = await response.json();
-        console.error('Ошибка:', error.detail);
-        return;
+      const errorData = await response.json();
+      throw new Error(`Ошибка: ${JSON.stringify(errorData)}`); // Выводим более подробную информацию об ошибке
     }
 
-    const products = await response.json();
-    console.log('Товары:', products);
-    displayProducts(products);
-}
-
-function displayProducts(products) {
-    const productList = document.getElementById('product-list');
-    productList.innerHTML = '';
-
-    products.forEach(product => {
-        const productItem = document.createElement('div');
-        productItem.textContent = `Название: ${product.name}, Цена: ${product.price}`;
-        productList.appendChild(productItem);
-    });
-}
-
-fetchProducts();
-  
+    const result = await response.json();
+    console.log('Документ успешно добавлен:', result);
+  } catch (error) {
+    console.error('Ошибка:', error);
+  }
+};
   </script>
-  

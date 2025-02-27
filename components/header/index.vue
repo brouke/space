@@ -5,7 +5,8 @@
         </div>
         <div class="head-button">
             <nuxt-link to="/Info" class="link">О нас</nuxt-link>
-            <nuxt-link to="" class="link">
+            <NuxtLink to="/account" class="link" v-if="hasToken">Профиль</NuxtLink>
+            <nuxt-link to="/auth" class="link" v-else>
                 <Button 
                     placeholder="Вход"
                     :className="'btn_auth-button'"
@@ -14,3 +15,18 @@
         </div>
   </div>
 </template>
+<script setup>
+import { ref } from 'vue';
+import Cookies from 'js-cookie';
+
+const hasToken = ref(false);
+const error = ref(null);
+
+// Проверяем наличие access token в куки
+const checkToken = () => {
+  const token = Cookies.get('access_token'); // Получаем токен из куки
+  hasToken.value = !!token; // Устанавливаем значение в true, если токен существует
+};
+
+checkToken(); 
+</script>

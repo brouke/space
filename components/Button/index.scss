@@ -57,6 +57,20 @@
             cursor: pointer;
             padding: 15px;
     }
+    &_authorise{
+        &-button{
+            width: 205px !important;
+            height: 50px !important;
+            border-radius: 30px !important;
+            background: #60617F !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: "Carrois";
+            font-size: 36px;
+        }
+    }
     &_auth{
         &-button{
             width: 100px !important;
@@ -88,6 +102,20 @@
             font-family: 'Carrois';
             font-size: 28px;
             padding: 8px;
+            border: none;
+        }
+    }
+    &_reg{
+        &-button{
+            border-radius: 30px !important;
+            background: #60617F !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Carrois';
+            font-size: 28px;
+            padding: 16px;
             border: none;
         }
     }

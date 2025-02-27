@@ -1,4 +1,5 @@
 <template>
+  <Header></Header>
     <div id="app">
       <header>
         <nav>
