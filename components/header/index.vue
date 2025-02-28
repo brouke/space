@@ -4,6 +4,7 @@
             <nuxt-link to="/" class="link_logo">Logo</nuxt-link>
         </div>
         <div class="head-button">
+            <nuxt-link to="/admin" class="link">Помещения</nuxt-link>
             <nuxt-link to="/Info" class="link">О нас</nuxt-link>
             <NuxtLink to="/account" class="link" >Профиль</NuxtLink>
             <nuxt-link to="/auth" class="link" >
