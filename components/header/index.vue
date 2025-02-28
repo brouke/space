@@ -5,8 +5,8 @@
         </div>
         <div class="head-button">
             <nuxt-link to="/Info" class="link">О нас</nuxt-link>
-            <NuxtLink to="/account" class="link" v-if="hasToken">Профиль</NuxtLink>
-            <nuxt-link to="/auth" class="link" v-else>
+            <NuxtLink to="/account" class="link" >Профиль</NuxtLink>
+            <nuxt-link to="/auth" class="link" >
                 <Button 
                     placeholder="Вход"
                     :className="'btn_auth-button'"
