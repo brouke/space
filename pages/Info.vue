@@ -42,13 +42,15 @@
 
   ТЦ Avenue: Где бизнес встречается с успехом.
   </div>
-</div>
+  <div class="blok_desc_arenda_map">
+  <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/44/izhevsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Ижевск</a><a href="https://yandex.ru/maps/44/izhevsk/house/pushkinskaya_ulitsa_165/YUoYdAZlS0IFQFtsfXRydn9rZQ==/?ll=53.216581%2C56.837523&utm_medium=mapframe&utm_source=maps&z=17" style="color:#eee;font-size:12px;position:absolute;top:14px;">Пушкинская улица, 165 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=53.216581%2C56.837523&mode=whatshere&whatshere%5Bpoint%5D=53.214766%2C56.837256&whatshere%5Bzoom%5D=17&z=17" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+</div></div>
     <div>
       <router-link to="/">Вернуться на главную</router-link>
     </div>
   </div>
   </div>
-
+ <Footer></Footer>
   </template>
   
   <script setup>

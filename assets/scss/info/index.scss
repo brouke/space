@@ -32,6 +32,8 @@
     &_arenda{
         margin-top: 45px;
         margin: 50px;
+       
+
         &_title{
             text-align: center;
             font-size: 35px;
@@ -49,6 +51,14 @@
             margin-top: 20px;
             text-align: center;
         }
+        &_map{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
     }
 }
 }
+

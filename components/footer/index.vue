@@ -3,7 +3,7 @@
         <div class="foot_left">
             <nuxt-link to="/Info" class="link">О нас</nuxt-link><br>
             <nuxt-link to="/" class="link">Помещения</nuxt-link>
-            <div class="foot_left_adres">Адрес: г. Ижевск Пушкинская д. 125</div>
+            <div class="foot_left_adres">Адрес: г. Ижевск Пушкинская д. 165</div>
             <div class="head_logo">
             <nuxt-link to="/" class="link_logo">Avenue</nuxt-link>
             </div>

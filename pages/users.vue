@@ -22,6 +22,6 @@
                 Контактное лицо: <br>
             </div>   
         </div>
-        
+        <Footer></Footer>  
     </div>
 </template>

@@ -9,6 +9,7 @@
       </header>
       <nuxt-child /> <!-- Здесь будут отображаться компоненты страниц -->
     </div>
+    <Footer></Footer>
   </template>
   
   <script setup>
