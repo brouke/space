@@ -4,9 +4,9 @@
             <nuxt-link to="/" class="link_logo">Avenue</nuxt-link>
         </div>
         <div class="head-button">
-            <nuxt-link to="/agreement" class="link">Договоры</nuxt-link>
-            <nuxt-link to="/users" class="link">Пользователи</nuxt-link>
-            <nuxt-link to="/admin" class="link">Помещения</nuxt-link>
+            <nuxt-link to="/agreement" class="link" v-if="userId == 1">Договоры</nuxt-link>
+            <nuxt-link to="/users" class="link" v-if="userId == 1">Пользователи</nuxt-link>
+            <nuxt-link to="/admin" class="link" v-if="userId == 1">Помещения</nuxt-link>
             <nuxt-link to="/Info" class="link">О нас</nuxt-link>
             <nuxt-link to="/account" class="link" >Профиль</nuxt-link>
             <nuxt-link to="/auth" class="link" >
@@ -23,6 +23,7 @@ import { ref } from 'vue';
 import Cookies from 'js-cookie';
 
 const hasToken = ref(false);
+const userId = ref(null);
 const error = ref(null);
 
 // Проверяем наличие access token в куки
@@ -31,6 +32,14 @@ const checkToken = () => {
   hasToken.value = !!token; // Устанавливаем значение в true, если токен существует
 };
 
-checkToken(); 
+const getUserId = () => {
+  const id = Cookies.get('user_id');
+  if (id) {
+    userId.value = id;
+    return true;
+  }
+}
+checkToken();
+getUserId() 
 
 </script>

@@ -4,24 +4,17 @@
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
-    height: 100%;
     place-content: center;
     display: grid;
+    overflow-y: auto;
     &__info{
         background-color: #ffffff;
-        width: 1461px;
-        height: 581px;
-        border-radius: 30px;
-        @media screen and (width < 1620px){
-            width: 1100px;
-        }
-        @media screen and (width < 1340px){
-           width: 900px;
-          }
-          @media screen and (width < 940px){
-            width: 700px;
-            height: fit-content;
-          }
+    height: -moz-fit-content;
+    /* height: fit-content; */
+    border-radius: 30px;
+    width: 800px;
+    height: 900px;
+    overflow-y: auto;
     }
     &__close{
         display: grid;
@@ -32,6 +25,7 @@
         flex-direction: column;
         align-items: center;
         gap: 30px;
+        padding-bottom: 15px;
         &-name{
             display: flex;
             justify-content: center;
@@ -79,7 +73,76 @@
         }
     }
 }
-@font-face {
-	font-family: 'OpenSans'; 
-	src: url(/assets/Font/OpenSans.ttf); 
+
+.modals{
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    place-content: center;
+    display: grid;
+    overflow-y: auto;
+    &__info{
+        background-color: #ffffff;
+        padding-top: 35%;
+        height: fit-content;
+        border-radius: 30px;
+    }
+    &__close{
+        display: grid;
+        justify-content: end;
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding-bottom: 15px;
+        &-name{
+            display: flex;
+            justify-content: center;
+            font-size: 48px;
+            line-height: 64.46px;
+        }
+
+        &-input{
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            align-items: center;
+            gap: 20px;
+            }
+
+        &-checkbox{
+            display: grid;
+            grid-template-columns: 0.59fr 1fr;
+            width: 100%;
+            align-items: center;
+            justify-items: start;
+            p{
+                font-family: OpenSans;
+                font-size: 32px;
+                font-weight: 600;
+                line-height: 43.58px;
+                text-align: left;
+                color: rgba(78, 48, 0, 1);
+                margin: unset;
+            }
+            input[type=checkbox] {
+                width: 34px;
+                height: 34px;
+                border: 2px;
+
+            }
+            @media screen and (width < 1620px){
+                grid-template-columns: 0.49fr 1fr;
+            }
+        }
+        &-button{
+            display: flex;
+            width: 60%;
+            justify-content: center;
+        }
+    }
 }

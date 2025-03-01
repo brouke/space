@@ -1,5 +1,6 @@
 <template>
      <Header></Header>
+     {{ documentInfo }}
      {{ userInfo }}
      <button @click="fetchUserInfo">Загрузить информацию о пользователе</button>
      <div class="prof">
@@ -23,7 +24,15 @@
                 <div class="prof_block_info-desc">Контактное лицо: {{ userInfo.contactface }}</div>
             </div>
             <div class="prof_block_info_i">
-                Изменить
+                <Button 
+                @click="ModalOpen = true"
+                    placeholder="Изменить"
+                    :className="'btn_put-button'"
+                    />
+                    <ModalsEditStaff v-if="ModalOpen"
+                    @close="ModalOpen = false"  
+                    @update ="refresh()"
+            />
             </div>
         </div>
         <div class="prof_block_dok">
@@ -37,11 +46,25 @@
                         <th>Номер договора</th>
                         <th>Торговая точка</th>
                         <th>Имя клиента</th>
-                        <th>Период аренды</th>
-                        <th>Ежемесячная плата</th>
-                        <th>Разорвать договор</th>
+                        <th>Номер</th>
+                        <th>Контактное лицо</th>
+                        <th>Реквизиты</th>
+                        <th>Адрес</th>
+                        <th>Стоимость</th>
                     </tr>
                     </thead>
+                    <tbody>
+                        <tr v-for="item in documentInfo">
+                            <th scope="row">{{ item.id }}</th>
+                            <th scope="row">{{ item.idRoom }}</th>
+                            <th scope="row">{{ item.Name }}</th>
+                            <th scope="row">{{ item.number }}</th>
+                            <th scope="row">{{ item.contactface }}</th>
+                            <th scope="row">{{ item.requisites }}</th>
+                            <th scope="row">{{ item.adress }}</th>
+                            <th scope="row">{{ item.rental }}</th>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -54,9 +77,11 @@ import { ref, onMounted } from 'vue';
 import Cookies from 'js-cookie';
 
 const userId = ref(null);
+const documentInfo = ref([])
 const userInfo = ref([]);
 const error = ref(null);
 const loading = ref(false);
+const ModalOpen = ref(false);
 
 // Функция для получения ID пользователя из куки
 const getUserId = () => {
@@ -96,10 +121,34 @@ const fetchUserInfo = async () => {
     loading.value = false;
   }
 };
+const fetchUserDocuments = async () => {
+  try {
+    
+    if (!userId.value) {
+      console.error('ID пользователя не найден');
+      return;
+    }
+    
+    // Используем fetch вместо axios
+    const response = await fetch(`http://127.0.0.1:8000/documents/user/${userId.value}`);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    documentInfo.value = data
+    // Обработка ответа
+    // ...
+  } catch (err) {
+    console.error('Ошибка при получении договоров:', err);
+  }
+};
 // Вызываем функцию при монтировании компонента
 onMounted(() => {
   if (getUserId()) {
-    fetchUserInfo(); // Отправляем запрос сразу после получения ID пользователя
+    fetchUserInfo();
+    fetchUserDocuments(); // Добавлен вызов функции для получения договоров пользователя
   }
 });
 </script>

@@ -3,6 +3,11 @@
     font-size: 35px;
     text-align: center;
 }
+.info_user{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
 .user{
     background-color: rgb(255, 255, 255);
     border-radius: 20px;

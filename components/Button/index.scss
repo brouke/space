@@ -1,4 +1,18 @@
 .btn{
+    &_put{
+        &-button{
+            width: 205px !important;
+            height: 50px !important;
+            border-radius: 5px !important;
+            background: #60617F !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white !important;
+            font-family: "Carrois";
+            font-size: 36px; 
+        }
+    }
     &__add{
         &-button{
         width: 273px !important;
@@ -61,7 +75,7 @@
         &-button{
             width: 205px !important;
             height: 50px !important;
-            border-radius: 30px !important;
+            border-radius: 5px !important;
             background: #60617F !important;
             display: flex;
             align-items: center;
@@ -75,7 +89,7 @@
         &-button{
             width: 100px !important;
             height: 40px !important;
-            border-radius: 30px !important;
+            border-radius: 5px !important;
             background: #60617F !important;
             display: flex;
             align-items: center;
@@ -86,14 +100,14 @@
     }
     &_cee{
         &-button{
-            border-radius: 30px;
+            border-radius: 5px;
             color: black;
             font-family: 'Carrois';
         }
     }
     &_buy{
         &-button{
-            border-radius: 30px !important;
+            border-radius: 5px !important;
             background: #60617F !important;
             display: flex;
             align-items: center;
@@ -107,7 +121,7 @@
     }
     &_reg{
         &-button{
-            border-radius: 30px !important;
+            border-radius: 5px !important;
             background: #60617F !important;
             display: flex;
             align-items: center;
@@ -122,7 +136,7 @@
     }
     .active{
         background: #C4C4C4;
-        border-radius: 20px;
+        border-radius: 5px;
     } 
 .circle{
     padding: 20px;

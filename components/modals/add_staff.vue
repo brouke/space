@@ -66,7 +66,7 @@ const register = async () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        name: name.value,
+        Name: name.value, // Исправлено с Тame на Name
         surname: surname.value,
         login: login.value,
         password: password.value,
@@ -74,10 +74,20 @@ const register = async () => {
     });
 
     if (!response.ok) {
-      throw new Error('Ошибка сети или неверные учетные данные');
+      const errorData = await response.json().catch(() => ({}));
+      console.error('Ошибка сервера:', errorData);
+      throw new Error(`Ошибка регистрации: ${JSON.stringify(errorData)}`);
     }
+    
+    // Обработка успешного ответа
+    const data = await response.json();
+    console.log('Успешная регистрация:', data);
+    
+    // Здесь можно добавить код для закрытия модального окна или перенаправления
+    
   } catch (err) {
     error.value = err.message;
+    console.error('Ошибка при регистрации:', err);
   }
 };
 const emit = defineEmits(["close", "update"]);

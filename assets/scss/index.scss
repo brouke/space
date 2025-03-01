@@ -108,7 +108,9 @@ body {
 }
 .cart{
   display: flex;
-  justify-content: center;
+    justify-content: center;
+    gap: 5%;
+    padding: 2%;
 }
 .block{
   display: grid;
