@@ -1,3 +1,4 @@
+@media screen and (max-width: 1680px){
 .agr{
    display: flex;
     &_block{
@@ -19,3 +20,28 @@
         }
     }
 }
+}
+@media screen and (max-width: 320px){
+    .agr{
+       display: flex;
+        &_block{
+             background-color: rgb(255, 255, 255);
+        width: 150px;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 10px;
+            &_title{
+                font-size: 15px;
+                text-align: center;
+            }
+            &_info{
+                font-size: 10px;
+                padding-top: 10px;
+            }
+            &_btn{
+                padding-top: 5px;
+                font-size: 7px;
+            }
+        }
+    }
+    }
