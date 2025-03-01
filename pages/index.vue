@@ -14,7 +14,8 @@
   </div>
 
 <div class="zag">Помещения</div>
-<div class="cart">
+<nuxt-link to="/product">
+  <div class="cart">
   <div class="block" v-for="item in items">
     <div class="block_img">
       <img :src="item.photo_url" alt="">
@@ -25,13 +26,11 @@
       <div class="block_info_desc">
       <div class="block_info_details">{{item.description}}</div>
 </div>
-  <Button 
-        placeholder="Арендовать"
-        :className="'btn_buy-button'"
-        />
     </div>
   </div>
-</div>  
+</div> 
+</nuxt-link>
+ 
   </template>
   <style >
   @import '@/assets/scss/index.scss';

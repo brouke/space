@@ -8,7 +8,7 @@
             <nuxt-link to="/users" class="link">Пользователи</nuxt-link>
             <nuxt-link to="/admin" class="link">Помещения</nuxt-link>
             <nuxt-link to="/Info" class="link">О нас</nuxt-link>
-            <NuxtLink to="/account" class="link" >Профиль</NuxtLink>
+            <nuxt-link to="/account" class="link" >Профиль</nuxt-link>
             <nuxt-link to="/auth" class="link" >
                 <Button 
                     placeholder="Вход"
