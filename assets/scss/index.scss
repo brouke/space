@@ -98,10 +98,14 @@ body {
   padding: 15px;
   gap: 3%;
   &_img{
-    background-image: url("img/diploma.webp");
+    // background-image: url("img/diploma.webp");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
+    img{
+      width: 100%;
+      height: 100%;
+    }
   }
   &_info{
     display: flex;

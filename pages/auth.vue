@@ -59,7 +59,8 @@ const auth = async () => {
 
     const data = await response.json();
     // Сохраняем access token в куки
-    Cookies.set('access_token', data.access_token, { expires: 7 }); // Кука будет действительна 7 дней
+    Cookies.set('access_token', data.access_token, { expires: 7 });
+    Cookies.set('user_id', data.user_id, { expires: 7 }); // Кука будет действительна 7 дней
     // Здесь вы можете добавить логику для перенаправления пользователя или обновления состояния
   } catch (err) {
     error.value = err.message; // Сохраняем сообщение об ошибке

@@ -27,9 +27,10 @@ const error = ref(null);
 
 // Проверяем наличие access token в куки
 const checkToken = () => {
-  const token = Cookies.get('access_token'); // Получаем токен из куки
+  const token = Cookies.get('access_token');// Получаем токен из куки
   hasToken.value = !!token; // Устанавливаем значение в true, если токен существует
 };
 
 checkToken(); 
+
 </script>

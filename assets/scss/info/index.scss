@@ -1,4 +1,7 @@
 .blok{
+    display: flex;
+    justify-content: center;
+    &_desc{
     background-color:rgb(255, 255, 255);
     border-radius: 30px;
     width: 1400px;
@@ -47,4 +50,5 @@
             text-align: center;
         }
     }
+}
 }
