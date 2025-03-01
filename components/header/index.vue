@@ -4,6 +4,7 @@
             <nuxt-link to="/" class="link_logo">Logo</nuxt-link>
         </div>
         <div class="head-button">
+            <nuxt-link to="/agreement" class="link">Договоры</nuxt-link>
             <nuxt-link to="/users" class="link">Пользователи</nuxt-link>
             <nuxt-link to="/admin" class="link">Помещения</nuxt-link>
             <nuxt-link to="/Info" class="link">О нас</nuxt-link>

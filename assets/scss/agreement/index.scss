@@ -1,0 +1,21 @@
+.agr{
+   display: flex;
+    &_block{
+         background-color: rgb(255, 255, 255);
+    width: 350px;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px;
+        &_title{
+            font-size: 25px;
+            text-align: center;
+        }
+        &_info{
+            font-size: 20px;
+            padding-top: 10px;
+        }
+        &_btn{
+            padding-top: 5px;
+        }
+    }
+}
