@@ -1,4 +1,5 @@
-.authorise{
+@media screen and (max-width: 1680px){
+    .authorise{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,4 +43,52 @@
         padding-bottom: 25px;
     }
     }
+}
+}
+@media screen and (max-width: 320px){
+    .authorise{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25%;
+    &_window{
+    width: 80%;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    &_name{
+        font-size: 18px;
+        line-height: 64.46px;
+    }
+    &-input{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 60%;
+    }
+    &-text{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        font-size: 10px;
+        font-family: "Carrois";
+    }
+    &-reg{
+        cursor: pointer;
+        font-size: 10px;
+        font-family: "Carrois";
+    }
+    &-button{
+        display: flex;
+        gap: 25px;
+        flex-direction: column;
+        width: 60%;
+        align-items: center;
+        padding-bottom: 25px;
+    }
+    }
+}
 }
