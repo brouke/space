@@ -30,7 +30,7 @@
   </div>
 </div> 
 </nuxt-link>
- 
+ <Footer></Footer>
   </template>
   <style >
   @import '@/assets/scss/index.scss';

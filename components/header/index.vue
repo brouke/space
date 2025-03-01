@@ -1,7 +1,7 @@
 <template>
     <div class="head">
         <div class="head_logo">
-            <nuxt-link to="/" class="link_logo">Logo</nuxt-link>
+            <nuxt-link to="/" class="link_logo">Avenue</nuxt-link>
         </div>
         <div class="head-button">
             <nuxt-link to="/agreement" class="link">Договоры</nuxt-link>
