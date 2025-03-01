@@ -1,18 +1,16 @@
-@import '@/components/Button/index.scss';
-@import '@/assets/scss/auth/index.scss';
-@import '@/components/Modals/index.scss';
-@import '@/assets/scss/info/index.scss';
-@import '@/assets/scss/account/index.scss';
-@import '@/assets/scss/admin/index.scss';
-// @import '@/components/Select/index.scss';
-@import '@/components/Input/index.scss';
-// @import '@/assets/scss/Account/index.scss';
-@import '@/assets/scss/users/index.scss';
-@import '@/assets/scss/agreement/index.scss';
-@import '@/assets/scss/product/index.scss';
+@import "@/components/Button/index.scss";
+@import "@/assets/scss/auth/index.scss";
+@import "@/components/Modals/index.scss";
+@import "@/assets/scss/info/index.scss";
+@import "@/assets/scss/account/index.scss";
+@import "@/assets/scss/admin/index.scss";
+@import "@/components/Input/index.scss";
+@import "@/assets/scss/users/index.scss";
+@import "@/assets/scss/agreement/index.scss";
+@import "@/assets/scss/product/index.scss";
 
-*{
-  font-family: 'Ysabeau Office';
+* {
+  font-family: "Ysabeau Office";
   color: black;
 }
 html,
@@ -20,84 +18,94 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
-  background-color: #E5E6E7;
+  background-color: #e5e6e7;
 }
 #__nuxt {
   min-height: 100%;
   display: flex;
   flex-direction: column;
 }
-@media screen and (max-width: 1680px){
-.app{
+
+.app {
   height: 100%;
   margin: 0px;
   padding: 0px;
 }
-.head{
+.head {
   width: 100%;
-  height: 75px;
   display: flex;
-  flex-direction: row;
+  padding: 10px 0;
   justify-content: space-around;
   align-items: center;
-  gap: 60%;
-  &-button{
+  @media screen and (max-width: 991px) {
+    flex-direction: column;
+  }
+  &-button {
     display: flex;
-    gap: 10%;
+    gap: 15px;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
-.foot{
-  width: 100%;
+.foot {
   height: 150px;
-  background-color: #E5E6E7;
+  background-color: #e5e6e7;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 50%;
-  &_left{
-    &_adres{
+  gap: 10px;
+  padding: 0 15px;
+  flex-wrap: wrap;
+  &_left {
+    &_adres {
       font-size: 25px;
     }
   }
-  &_prav{
+  &_prav {
     font-size: 25px;
-    
   }
 }
-.link{
+.link {
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 25px;
+  &_logo {
     text-decoration: none;
-    white-space: nowrap;
-    font-size: 25px;
-    &_logo{
-      text-decoration: none;
-      font-size: 36px;
-    }
+    font-size: 36px;
   }
-  .banner{
-    width: 100% ;
+}
+.banner {
+  width: 100%;
+  height: 414px;
+  background-image: url("img/81e9615feb8a0f4cee1aa91c6986b622.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &_inf {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 6%;
+    gap: 23%;
+    justify-content: center;
+    width: 55%;
     height: 414px;
-    background-image: url("img/81e9615feb8a0f4cee1aa91c6986b622.jpg");
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    &_inf{
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding-left: 6%;
-      gap: 23%;
-      justify-content: center;
-      width: 55%;
-      height: 414px;
-    }
-    &_text{
-      font-size: 80px;
-      color: white;
+    @media screen and (max-width: 1191px) {
+      width: 100%;
+      gap: 10px;
     }
   }
-.zag{
+  &_text {
+    font-size: 80px;
+    color: white;
+    @media screen and (max-width: 991px) {
+      font-size: 40px;
+    }
+  }
+}
+.zag {
   display: flex;
   align-items: center;
   padding-left: 6%;
@@ -106,328 +114,63 @@ body {
   padding-top: 25px;
   padding-bottom: 25px;
 }
-.cart{
+.cart {
   display: flex;
     justify-content: center;
     gap: 5%;
     padding: 2%;
 }
-.block{
+.block {
   display: grid;
   grid-template-columns: 0.5fr 1fr;
   width: 85%;
   background-color: white;
   padding: 15px;
   gap: 3%;
-  &_img{
+  &_img {
     // background-image: url("img/diploma.webp");
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    img{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    img {
       width: 100%;
       height: 100%;
     }
   }
-  &_info{
+  &_info {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    &_details{
+    &_details {
       color: black;
-      font-family: 'Carrois';
+      font-family: "Carrois";
       font-size: 28px;
       line-height: 40px;
     }
-    &_desc{
+    &_desc {
       color: #484747;
-      font-family: 'Carrois';
+      font-family: "Carrois";
       font-size: 24px;
       line-height: 28px;
     }
-    &_title{
+    &_title {
       color: black;
-      font-family: 'Carrois';
+      font-family: "Carrois";
       font-size: 32px;
       line-height: 40px;
     }
   }
 }
-}
-@media screen and (max-width: 320px){
-  .app{
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-  }
-  .head{
-    width: 100%;
-    height: 75px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 60%;
-    &-button{
-      display: flex;
-      gap: 10%;
-      align-items: center;
-    }
-  }
-  .foot{
-    width: 100%;
-    height: 150px;
-    background-color: #E5E6E7;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 20%;
-    &_left{
-      &_adres{
-        font-size: 10px;
-      }
-    }
-    &_prav{
-      font-size: 10px;
-      
-    }
-  }
-  .link{
-      text-decoration: none;
-      white-space: nowrap;
-      font-size: 10px;
-      &_logo{
-        text-decoration: none;
-        font-size: 13px;
-      }
-    }
-    .banner{
-      width: 100% ;
-      height: 150px;
-      background-image: url("img/81e9615feb8a0f4cee1aa91c6986b622.jpg");
-      background-size: cover; 
-      background-position: center; 
-      background-repeat: no-repeat; 
-      &_inf{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding-left: 6%;
-        gap: 23%;
-        justify-content: center;
-        width: 15%;
-        height: 250px;
-      }
-      &_text{
-        font-size: 17px;
-        color: white;
-      }
-    }
-  .zag{
-    display: flex;
-    align-items: center;
-    padding-left: 6%;
-    font-size: 13px;
-    font-weight: 400;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-  .cart{
-    display: flex;
-    justify-content: center;
-  }
-  .block{
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    width: 85%;
-    background-color: white;
-    padding: 15px;
-    gap: 3%;
-    &_img{
-      // background-image: url("img/diploma.webp");
-      background-size: cover; 
-      background-position: center; 
-      background-repeat: no-repeat; 
-      img{
-        width: 100%;
-        height: 100%;
-      }
-    }
-    &_info{
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      &_details{
-        color: black;
-        font-family: 'Carrois';
-        font-size: 28px;
-        line-height: 40px;
-      }
-      &_desc{
-        color: #484747;
-        font-family: 'Carrois';
-        font-size: 24px;
-        line-height: 28px;
-      }
-      &_title{
-        color: black;
-        font-family: 'Carrois';
-        font-size: 32px;
-        line-height: 40px;
-      }
-    }
-  }
-  }
-// .head{
-//   font-family: 'Ysabeau Office';
-//   font-style: normal;
-//   &_logo{
-//     display: flex;
-//   }
-//   &_menu{
-//     display: flex;
-//     align-items: center;
-//     justify-content: flex-end;
-//     text-align: right;
-//     color: black;
-//     margin-top: -85px;
-//     margin-right: 84px;
-//     font-size: 16px;
-//     &_but{
-// width: 121px;
-// height: 50px;
-// left: 1256px;
-// top: 33px;
-// background: #60617F;
-// border-radius: 30px;
-// color: #FFFFFF;
-// font-size: 14px;
-// text-align: center;
-// display: flex;
-// align-items: center;
-// justify-content: center;
-// margin-left: 30px;
-// font-family: 'Ysabeau Office';
-//     }
-//   }
-// }
-// .banner{
-//   &_img{
-//     width: 100%;
-//     height: 674px;
-//     object-fit: cover;
-//     filter: brightness(50%);
-//     position: relative;
-//   }
-//   &_inf{
-// position: absolute;
-// width: 667px;
-// height: 214px;
-// left: 99px;
-// top: 130px;
-// font-family: 'Ysabeau Office';
-// font-style: normal;
-// font-weight: 400;
-// font-size: 35px;
-// line-height: 107px;
-// color: #FFFFFF;
-//     &_but{
-// position: absolute;
-// top: 687px;
-// font-family: 'Carrois Gothic';
-// font-style: normal;
-// font-weight: 400;
-// font-size: 36px;
-// line-height: 43px;
-// color: #000000;
-// position: absolute;
-// width: 439px;
-// height: 66px;
-// top: 200%;
-// background: #FFFFFF;
-// border-radius: 30px;
-//     }
-//   }
-// }
-// .blok{
-// position: absolute;
-// width: 1295px;
-// height: 400px;
-// left: 7%;
-// top: 890px;
-// // bottom: 5%;
-// background-color: #FFFFFF;
-// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-// display: flex;
-// // justify-content: center;
-// // margin-top: -60%;
-// &_img{
-// width: 330px;
-// height: 330px;
-// object-fit: cover;
-// margin: 30px;
-// }
-// &_info{
-//   margin: 5px;
-//   &_desc{
-// width: 848px;
-// height: 160px;
-// font-family: 'Carrois Gothic';
-// font-style: normal;
-// font-weight: 400;
-// font-size: 20px;
-// line-height: 40px;
-// color: #000000;
-//   }
-//   &_but{
-// width: 197px;
-// height: 40px;
-// background: #60617F;
-// border-radius: 30px;
-// color: #FFFFFF;
-// display: flex;
-// align-items: center;
-// justify-content: center;
-// font-size: 10px;
-// margin-top: 50px;
-//   }
-// }
-// }
-// h4{
-//   color: #565656;
-// }
-// .zag{
-//   position: absolute;
-//   top: 780px;
-//   left: 7%;
-//   font-size: 20px;
-//   font-family: 'Ysabeau Office';
-// }
-// .foot{
-//   background-color: #FFFFFF;
-//   position: absolute;
-//   top: 180%;
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-between;
-//   &_blok1{
-//     margin-left: 84px;
-//   }
-//   &_blok2{
-//     margin-right: 84px;
-//   }
-// }
 
 @font-face {
-  font-family: 'OpenSans'; 
-  src: url(/assets/Font/OpenSans.ttf); 
-  }
+  font-family: "OpenSans";
+  src: url(/assets/Font/OpenSans.ttf);
+}
 @font-face {
-  font-family: 'Ysabeau Office'; 
-  src: url(assets/scss/font/YsabeauOffice-Regular.ttf); 
-  }
+  font-family: "Ysabeau Office";
+  src: url(assets/scss/font/YsabeauOffice-Regular.ttf);
+}
 @font-face {
-  font-family: 'Carrois'; 
-  src: url(assets/scss/font/CarroisGothic-Regular.ttf); 
-  }
+  font-family: "Carrois";
+  src: url(assets/scss/font/CarroisGothic-Regular.ttf);
+}
