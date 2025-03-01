@@ -152,3 +152,82 @@
     }
 }
 }
+@media screen and (max-width: 1024px){
+    .blck{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+        align-items: center;
+    margin-top: 20px;
+    &_title{
+        font-size: 27px;
+        // margin-left: 50px;
+        margin-top: 0px;
+        text-align: center;
+    }
+    &_all{
+        // margin-left: 50px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        &_add{
+            width: 500px;
+            &_title{
+                font-size: 22px;
+                text-align: center;
+            }
+            
+            }
+        &_room{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &_one{
+            width: 85%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            gap: 3%;    
+            &_img{
+                background-image: url('img/diploma.webp');
+                background-size: cover; 
+                background-position: center; 
+                background-repeat: no-repeat; 
+            }
+            &_info{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                &_details{
+                color: black;
+                font-family: 'Carrois';
+                font-size: 20px;
+                // line-height: 40px;
+                }
+                &_desc{
+                color: #484747;
+                font-family: 'Carrois';
+                font-size: 20px;
+                // line-height: 28px;
+                }
+                &_title{
+                color: black;
+                font-family: 'Carrois';
+                font-size: 20px;
+                // line-height: 40px;
+                }
+            }
+            }
+            &_title{
+                font-size: 22px;
+                text-align: center;
+            }
+            
+        }
+    }
+}
+}
